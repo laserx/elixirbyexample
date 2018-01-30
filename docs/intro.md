@@ -6,7 +6,7 @@ elixir 是一门函数式动态语言, 并运行于 erlang VM(beam) 之上, 依�
 
 ## 语言特点
 1. 函数式编程
-1. elixir 是将代码编译为字节码, 运行于 erlang VM 之上的一门语言.
+1. elixir 是将代码编译为字节码, 运行于 erlang VM 之上的一门语言
 1. elixir 可以和 erlang 代码互操作
 1. 直接操作 AST 进行元编程
 1. 类 python 式的代码注释
