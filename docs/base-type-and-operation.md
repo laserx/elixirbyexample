@@ -3,9 +3,9 @@
 ## 整型和浮点型
 在 elixir 中, 整型的行为类似于 python3, 当进行除法运算时, 返回值为浮点数.
 ```elixir
-iex(1)> 3/3
+iex(1)> 3 / 3
 1.0
-iex(2)> 5/2
+iex(2)> 5 / 2
 2.5
 ```
 
@@ -114,8 +114,6 @@ iex(4)> "hello" <> " world"
 "hello world"
 ```
 
-字符串在 elixir 中本质是字符序列, 这部分稍后展开.
-
 ## 比较
 elixir 提供了一下比较运算符: `==`, `===`, `!=`, `!==`, `<=`, `>=`, `<` 和 `>`.
 
@@ -141,3 +139,6 @@ elixir 有一个比较重要的特性, 那就是任意两个类型之间可以�
 > number < atom < reference < function < port < pid < tuple < map < list < bitstring
 
 该特性只需了解, 实际使用中并没有特别大的作用.
+
+## 匿名函数
+

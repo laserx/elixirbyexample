@@ -19,7 +19,9 @@ iex(3)> [1, true, 2, false, 2, 3] -- [true, 2, 3]
 ```elixir
 iex(1)> hd [1, 2, 3]
 1
-iex(2)> hd []
+iex(2)> tl [1, 2, 3]
+[2, 3]
+iex(3)> hd []
 ** (ArgumentError) argument error
     :erlang.hd([])
 ```
