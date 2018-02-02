@@ -145,7 +145,7 @@ iex> map.hello
 "world"
 ```
 
-图的还有一种更新其属性的有趣的特性:
+图还提供了更新自身属性的一种语法这一有趣的特性:
 ```elixir
 iex> map = %{foo: "bar", hello: "world"}
 %{foo: "bar", hello: "world"}
