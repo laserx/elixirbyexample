@@ -3,20 +3,20 @@
 
 <!-- TOC -->
 
-- [枚举](#枚举)
-    - [枚举](#枚举-1)
+- [枚举](#%E6%9E%9A%E4%B8%BE)
+    - [枚举](#%E6%9E%9A%E4%B8%BE)
         - [all?](#all)
         - [any?](#any)
-        - [chunk_every](#chunk_every)
-        - [chunk_by](#chunk_by)
-        - [map_every](#map_every)
+        - [chunk_every](#chunkevery)
+        - [chunk_by](#chunkby)
+        - [map_every](#mapevery)
         - [each](#each)
         - [map](#map)
         - [min](#min)
         - [max](#max)
         - [reduce](#reduce)
         - [sort](#sort)
-        - [uniq_by](#uniq_by)
+        - [uniq_by](#uniqby)
 
 <!-- /TOC -->
 
