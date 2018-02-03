@@ -64,7 +64,7 @@ iex> x
 2
 ```
 
-elixir 1.2 引入了对图键和函数子句进行锁定功能:
+elixir 1.2 引入了对图键和函数子句进行锁定的功能:
 ```elixir
 iex> key = "hello"
 "hello"
