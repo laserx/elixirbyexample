@@ -9,9 +9,11 @@
 ## content
 ### 基础
 1. [概述](docs/intro.md)
-1. [基本数据结构和操作](docs/basics.md)
+1. [基础](docs/basics.md)
 1. [集合](docs/collections.md)
+1. [枚举](docs/enum.md)
 1. [模式匹配](docs/pattern-matching.md)
+1. [流程控制](docs/control.md)
 1. [参考资料](docs/ref.md)
 
 ### 高级
