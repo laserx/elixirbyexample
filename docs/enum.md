@@ -1,6 +1,25 @@
 # 枚举
 用来枚举可枚举值的一套算法.
 
+<!-- TOC -->
+
+- [枚举](#枚举)
+    - [枚举](#枚举-1)
+        - [all?](#all)
+        - [any?](#any)
+        - [chunk_every](#chunk_every)
+        - [chunk_by](#chunk_by)
+        - [map_every](#map_every)
+        - [each](#each)
+        - [map](#map)
+        - [min](#min)
+        - [max](#max)
+        - [reduce](#reduce)
+        - [sort](#sort)
+        - [uniq_by](#uniq_by)
+
+<!-- /TOC -->
+
 ## 枚举
 枚举模块提供了超过70种函数来处理可枚举值. 在上一课程中我们学的所有集合, 除了元组, 都是可枚举的.
 
