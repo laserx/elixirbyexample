@@ -18,12 +18,12 @@ at/3
 ...
 ```
 
-如上, 枚举提供了大量的函数, 同时, 这又是显而易见的. 其是函数式编程的核心, 是非常有用的功能. 眼见为实, 通过它结合 elixir 其他的特性, 枚举提供给开发者难以置信的可操作性.
+如上, 枚举提供了大量的函数, 同时, 这又是显而易见的. 其是函数式编程的核心, 是非常有用的功能. 眼见为实, 通过它结合 elixir 其他的特性, 枚举提供给开发者难以置信的可操作性.
 
 有关枚举的完整文档, 可以查看官方 [Enum](https://hexdocs.pm/elixir/Enum.html) 文档; 惰性枚举可以使用 [Stream](https://hexdocs.pm/elixir/Stream.html) 模块.
 
 ### all?
-当使用 `all?/2`, 和大部分枚举方法一样, 我们提供一个函数来应用于集合的元素之上. 在这个例子中, 整个集合必须判定为 `true`, 否则, 将返回 `false`:
+当使用 `all?/2`, 和大部分枚举方法一样, 我们提供一个函数来应用于集合的元素之上. 在这个例子中, 整个集合必须判定为 `true`, 否则, 将返回 `false`:
 ```elixir
 iex> Enum.all?(["foo", "bar", "hello"], fn(s) -> String.length(s) == 3 end)
 false
@@ -39,16 +39,16 @@ true
 ```
 
 ### chunk_every
-如果你需要将集合分割成多个小的分组, 你可以使用 `chunk_every/2` 这个函数:
+如果你需要将集合分割成多个小的分组, 你可以使用 `chunk_every/2` 这个函数:
 ```elixir
 iex> Enum.chunk_every([1, 2, 3, 4, 5, 6], 2)
 [[1, 2], [3, 4], [5, 6]]
 ```
 
-还有一个具有更多元数的函数 `chunk_every/4`, 但是在这里我们不去探究, 如需了解相关内容, 可以参考[官方文档](https://hexdocs.pm/elixir/Enum.html#chunk_every/4)
+还有一个具有更多元数的函数 `chunk_every/4`, 但是在这里我们不去探究, 如需了解相关内容, 可以参考[官方文档](https://hexdocs.pm/elixir/Enum.html#chunk_every/4)
 
 ### chunk_by
-当我们需要将集合分组而不仅仅是根据分组的大小时, 我们可以使用函数 `chunk_by/2`, 其接受一个可枚举值和一个函数, 当函数的返回值发生变化时, 就会创建一个新的分组:
+当我们需要将集合分组而不仅仅是根据分组的大小时, 我们可以使用函数 `chunk_by/2`, 其接受一个可枚举值和一个函数, 当函数的返回值发生变化时, 就会创建一个新的分组:
 ```elixir
 iex> Enum.chunk_by(["one", "two", "three", "four", "five"], fn(x) -> String.length(x) end)
 [["one", "two"], ["three"], ["four", "five"]]
@@ -57,7 +57,7 @@ iex> Enum.chunk_by(["one", "two", "three", "four", "five", "six"], fn(x) -> Stri
 ```
 
 ### map_every
-有时将集合分组不能满足我们的需求, 在某些情况下, `map_every/3` 对需要改变第 n 个值的场景很适用, 注意, 该方法总会处理第一个值:
+有时将集合分组不能满足我们的需求, 在某些情况下, `map_every/3` 对需要改变第 n 个值的场景很适用, 注意, 该方法总会处理第一个值:
 ```elixir
 # Apply function every three items
 iex> Enum.map_every([1, 2, 3, 4, 5, 6, 7, 8], 3, fn x -> x + 1000 end)
@@ -65,7 +65,7 @@ iex> Enum.map_every([1, 2, 3, 4, 5, 6, 7, 8], 3, fn x -> x + 1000 end)
 ```
 
 ### each
-当只需要迭代一个集合而不产生新值的情况下, 我们可以使用函数 `each/2`:
+当只需要迭代一个集合而不产生新值的情况下, 我们可以使用函数 `each/2`:
 ```elixir
 iex> Enum.each(["one", "two", "three"], fn(s) -> IO.puts(s) end)
 one
@@ -73,10 +73,10 @@ two
 three
 :ok
 ```
-**注意**: 函数 `each/2` 会返回一个 `:ok` 的原子.
+**注意**: 函数 `each/2` 会返回一个 `:ok` 的原子.
 
 ### map
-需要将函数应用于每一个值同时生成一个新的集合, 可以使用函数 `map/2`:
+需要将函数应用于每一个值同时生成一个新的集合, 可以使用函数 `map/2`:
 ```elixir
 iex> Enum.map([0, 1, 2, 3], fn(x) -> x - 1 end)
 [-1, 0, 1, 2]
@@ -89,20 +89,20 @@ iex> Enum.min([5, 3, 0, -1])
 -1
 ```
 
-`min/2` 的作用和 `min/1` 相同, 但是当可枚举值为空时, 函数允许我们指定一个函数来返回最小值:
+`min/2` 的作用和 `min/1` 相同, 但是当可枚举值为空时, 函数允许我们指定一个函数来返回最小值:
 ```elixir 
 iex> Enum.min([], fn -> :foo end)
 :foo
 ```
 
 ### max
-函数 `max/1` 返回集合中最大值:
+函数 `max/1` 返回集合中最大值:
 ```elixir
 iex> Enum.max([5, 3, 0, -1])
 5
 ```
 
-`max/2` 类似于 `min/2`:
+`max/2` 类似于 `min/2`:
 ```elixir
 Enum.max([], fn -> :bar end)
 :bar
@@ -122,9 +122,9 @@ iex> Enum.reduce(["a","b","c"], "1", fn(x,acc)-> x <> acc end)
 ```
 
 ### sort
-通过两个排序函数, 我们可以轻松的为集合排序.
+通过两个排序函数, 我们可以轻松的为集合排序.
 
-`sort/1` 使用 erlang 的排序方式(term ordering??)来确定排序顺序:
+`sort/1` 使用 erlang 的排序方式(term ordering??)来确定排序顺序:
 ```elixir
 iex> Enum.sort([5, 6, 1, 3, -1, 4])
 [-1, 1, 3, 4, 5, 6]
@@ -145,7 +145,7 @@ iex> Enum.sort([%{:count => 4}, %{:count => 1}])
 ```
 
 ### uniq_by
-我们可以使用 `uniq_by/2` 来移除集合中的重复值:
+我们可以使用 `uniq_by/2` 来移除集合中的重复值:
 ```elixir
 iex> Enum.uniq_by([1, 2, 3, 2, 1, 1, 1, 1, 1], fn x -> x end)
 [1, 2, 3]
