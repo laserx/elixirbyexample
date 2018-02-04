@@ -14,6 +14,7 @@
 1. [枚举](docs/enum.md)
 1. [模式匹配](docs/pattern-matching.md)
 1. [流程控制](docs/control.md)
+1. [函数](docs/functions.md)
 1. [参考资料](docs/ref.md)
 
 ### 高级
