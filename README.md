@@ -15,6 +15,9 @@
 1. [模式匹配](docs/pattern-matching.md)
 1. [流程控制](docs/control.md)
 1. [函数](docs/functions.md)
+1. [管道操作符](docs/pipe.md)
+1. [模块](docs/modules.md)
+1. [mix](docs/mix.md)
 1. [参考资料](docs/ref.md)
 
 ### 高级
