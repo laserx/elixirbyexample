@@ -18,6 +18,7 @@
 1. [管道操作符](docs/pipe.md)
 1. [模块](docs/modules.md)
 1. [mix](docs/mix.md)
+1. [印记](docs/sigils.md)
 1. [参考资料](docs/ref.md)
 
 ### 高级
