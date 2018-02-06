@@ -19,8 +19,9 @@
 1. [模块](docs/modules.md)
 1. [mix](docs/mix.md)
 1. [印记](docs/sigils.md)
-1. [参考资料](docs/ref.md)
 1. [文档](docs/documentations.md)
+1. [测试](docs/testing.md)
+1. [参考资料](docs/ref.md)
 
 ### 高级
 
