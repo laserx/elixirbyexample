@@ -21,6 +21,10 @@
 1. [印记](docs/sigils.md)
 1. [文档](docs/documentations.md)
 1. [测试](docs/testing.md)
+1. [推导式](docs/comprehensions.md)
+1. [字符串](docs/strings.md)
+1. [定制 mix 任务](docs/mix-task.md)
+1. [iex 辅助函数](docs/iex.md)
 1. [参考资料](docs/ref.md)
 
 ### 高级
