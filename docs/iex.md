@@ -3,10 +3,11 @@
 <!-- TOC -->
 
 - [IEx 辅助函数](#iex-%E8%BE%85%E5%8A%A9%E5%87%BD%E6%95%B0)
-    - [概述](#%E6%A6%82%E8%BF%B0)
-        - [自动补全](#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8)
-        - [.iex.exs](#iexexs)
-        - [`h`](#h)
+  - [概述](#%E6%A6%82%E8%BF%B0)
+    - [自动补全](#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8)
+    - [.iex.exs](#iexexs)
+    - [`h`](#h)
+    - [i](#i)
 
 <!-- /TOC -->
 
@@ -136,4 +137,55 @@ Examples
 ┃ %{a: 3, b: 2, d: 4}
 ```
 
-正如我们看到的, 我们不仅仅可以查看模块提供了哪些函数, 还可以访问各个函数的文档, 很多包含用例演示.
+正如我们看到的, 我们不仅仅可以查看模块提供了哪些函数, 还可以访问各个函数的文档, 其中很多包含用例演示.
+
+### i
+让我们利用新掌握的 `h` 来学习更多关于 `i` 辅助函数的知识:
+```
+iex> h i
+
+                              def i(term \\ v(-1))
+
+Prints information about the data type of any given term.
+
+If no argument is given, the value of the previous expression is used.
+
+## Examples
+
+    iex> i(1..5)
+
+Will print:
+
+    Term
+      1..5
+    Data type
+      Range
+    Description
+      This is a struct. Structs are maps with a __struct__ key.
+    Reference modules
+      Range, Map
+
+iex> i Map
+Term
+  Map
+Data type
+  Atom
+Module bytecode
+  /usr/local/Cellar/elixir/1.6.1/bin/../lib/elixir/ebin/Elixir.Map.beam
+Source
+  /private/tmp/elixir-20180130-42559-1d5vx7w/elixir-1.6.1/lib/elixir/lib/map.ex
+Version
+  [234303838320399652689109978883853316190]
+Compile options
+  []
+Description
+  Use h(Map) to access its documentation.
+  Call Map.module_info() to access metadata.
+Raw representation
+  :"Elixir.Map"
+Reference modules
+  Module, Atom
+Implemented protocols
+  IEx.Info, Inspect, String.Chars, List.Chars
+```
+
