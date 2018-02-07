@@ -6,8 +6,11 @@
   - [概述](#%E6%A6%82%E8%BF%B0)
     - [自动补全](#%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8)
     - [.iex.exs](#iexexs)
-    - [`h`](#h)
+    - [h](#h)
     - [i](#i)
+    - [r](#r)
+    - [s](#s)
+    - [t](#t)
 
 <!-- /TOC -->
 
@@ -65,7 +68,7 @@ iex> IExHelpers.whats_this?(:test)
 
 正如我们看到的那样, 不需要做任何额外的 `require` 或者 `import` 动作来导入辅助函数, iex 为我们处理了.
 
-### `h`
+### h
 
 `h` 是 elixir 提供给我们最有用的工具之一. 由于语言对文档超一流的支持, 任何代码的文档都可以使用这个辅助函数获取. 看看下面的例子:
 ```shell
@@ -189,3 +192,63 @@ Implemented protocols
   IEx.Info, Inspect, String.Chars, List.Chars
 ```
 
+现在我们可以看到一些 `Map` 的信息, 包括源代码的存储位置, 模块的引用等. 这对研究自定义的, 外部数据和新功能等十分有用.
+
+孤立的看头部信息是无价值的, 但是在更高的层次我们可以手机到相关的信息:
+
+* 它是原子数据类型
+* 源代码的位置
+* 版本和编译选项
+* 基本描述
+* 如何访问它
+* 它引用了哪些模块
+
+这给了我们很多帮助, 总比盲目的进行要好.
+
+### r
+如果需要重编译部分模块时, 我们可以使用 `r` 辅助函数.
+
+比如, 修改了部分代码, 接着我们想执行一下刚刚修改的函数. 要做到这点, 我们需要保存修改, 并使用 `r` 进行重编译:
+```elixir
+iex> r MyProject
+warning: redefining module MyProject (current version loaded from _build/dev/lib/my_project/ebin/Elixir.MyProject.beam)
+  lib/my_project.ex:1
+
+{:reloaded, MyProject, [MyProject]}
+```
+
+### s
+使用 `s` 辅助函数, 可以获取模块或者函数的类型规格信息. 我们可以是用它来了解模块或者函数的可用功能:
+```elixir
+iex> s Map.merge/2
+@spec merge(map(), map()) :: map()
+
+# it also works on entire modules
+iex> s Map
+@spec get(map(), key(), value()) :: value()
+@spec put(map(), key(), value()) :: map()
+# ...
+@spec get(map(), key()) :: value()
+@spec get_and_update!(map(), key(), (value() -> {get, value()})) :: {get, map()} | no_return() when get: term()
+```
+
+### t
+`t` 辅助函数揭示给定模块的可用类型:
+```elixir
+iex> t Map
+@type key() :: any()
+@type value() :: any()
+```
+
+现在我们知道 `Map` 在其实现中定义了 `key` 和 `value` 类型. 如果我们查看 `Map` 的源码:
+```elixir
+defmodule Map do
+# ...
+  @type key :: any
+  @type value :: any
+# ...
+```
+
+这是一个简单的示例, 说明了实现 `key` 和 `value` 的值可以是任意的类型, 了解这些信息这对我们很有用.
+
+通过以上内置的帮助函数, 我们可以轻松探索源码, 同时学习更多程序是如何运行的细节. iex 是非常有用且强大的工具, 令开发人员如虎添翼. 通过 elixir 提供的这些工具, 使得研究和构建代码变得更有趣.

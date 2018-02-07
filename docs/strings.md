@@ -145,4 +145,4 @@ iex> Anagram.anagrams?(3, 5)
     iex:11: Anagram.anagrams?/2
 ```
 
-正如你看到的那样, 最后的 `anagrams?` 调用导致了 `FunctionClauseError`, 这个异常告诉了我们, 在模块中不存在接收两个非二进制参数的函数, 这正是我们想要的, 只接收两个字符串, 而不是其他的类型.
+正如你看到的那样, 最后的 `anagrams?` 调用导致了 `FunctionClauseError`, 这个异常告诉了我们, 在模块中不存在接收两个非二进制参数的函数, 这正是我们想要的, 只接收两个字符串, 没有其他可能.
