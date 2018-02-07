@@ -27,7 +27,18 @@
 1. [iex 辅助函数](docs/iex.md)
 
 ### 高级
-
+1. [erlang 互操作性](docs/interoperability.md)
+1. [异常处理](docs/error-handling.md)
+1. [可执行](docs/executables.md)
+1. [并发](docs/concurrency.md)
+1. [otp 并发](docs/otp-concurrency.md)
+1. [otp supervisors](docs/otp-supervisors.md)
+1. [元编程](docs/metaprogramming.md)
+1. [保护伞项目](docs/umbrella.md)
+1. [规格和类型](docs/spec-type.md)
+1. [behaviours](docs/behaviours.md)
+1. [GenStage](docs/genstage.md)
+1. [协议](docs/protocols.md)
 ### 详情
 
 ### 其他
