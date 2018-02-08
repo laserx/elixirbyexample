@@ -70,7 +70,7 @@ iex> 255
 ```
 
 elixir 内置支持二进制, 八进制和十六进制数字.
-```
+```elixir
 iex> 0b0110
 6
 iex> 0o644
@@ -109,7 +109,7 @@ false
 ```
 
 布尔值 `true` 和 `false` 对照 原子 `:true` 和 `:false` 相等.
-```elixir
+```elixir
 iex> true |> is_atom 
 true
 iex> :true |> is_boolean
@@ -167,7 +167,7 @@ iex> 10 / 5
 ```
 
 当你需要获取整数除法值或者余数时, elixir 提供了两个有用的函数来实现这个功能:
-```
+```elixir
 iex> div(10, 5)
 2
 iex> rem(10, 3)
