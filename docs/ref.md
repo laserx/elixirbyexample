@@ -3,6 +3,7 @@
 ## site
 1. [elixir offical](https://elixir-lang.org/)
 1. [elixir school](https://elixirschool.com/en/)
+1. [Today I Learned in Elixir](https://til.hashrocket.com/elixir)
 
 ## article
 1. [A week with Elixir](https://joearms.github.io/published/2013-05-31-a-week-with-elixir.html)
