@@ -84,7 +84,7 @@ iex> spawn_link(Example, :explode, [])
 ** (EXIT from #PID<0.84.0>) shell process exited with reason: :kaboom
 ```
 
-有时, 我们不希望已链接的进程崩溃当前进程, 为此, 我们需要使用 `Process.flag/2` 捕获退出通知. 其使用 erlang 的 `Process.flag/2` 函数作为 `trap_exit` 的标志位. 当捕获退出时(`trap_exit` 设置为 `true`), 退出信号将作为一个元组消息 `{:EXIT, from_pid, reason}` 被接收.
+有时, 我们不希望已链接的进程崩溃当前进程, 为此, 我们需要使用 `Process.flag/2` 捕获退出通知. 其使用 erlang 的 [`Process.flag/2`](http://erlang.org/doc/man/erlang.html#process_flag-2) 函数作为 `trap_exit` 的标志位. 当捕获退出时(`trap_exit` 设置为 `true`), 退出信号将作为一个元组消息 `{:EXIT, from_pid, reason}` 被接收.
 ```elixir
 defmodule Example do
   def explode, do: exit(:kaboom)
