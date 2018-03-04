@@ -44,6 +44,6 @@
 
 在示例中, 我们将构建一个生成数字的 `GenStage` 应用程序, 其整理偶数, 并将其最终打印出来.
 
-
+对于我们的应用来说, 我们会使用到全部三种 `GenStage` 角色. 生产者将负责计数和生成数字. 使用生产者-消费者来过滤出偶数, 然后对下游的需求做出响应. 最后, 我们将构建一个消费者来现实
 
 For our application we’ll use all three GenStage roles. Our producer will be responsible for counting and emitting numbers. We’ll use a producer-consumer to filter out only the even numbers and later respond to demand from downstream. Last we’ll build a consumer to display the remaining numbers for us.
