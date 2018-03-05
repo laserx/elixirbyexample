@@ -2,7 +2,9 @@
 
 ## 概述
 
-以下内容参考 elixir school 的组织结构编写, 但内容参考 elixir school, 官方文档, 以及 elixir programming 编写而成.
+以下内容由 [elixir school](https://elixirschool.com/en/) 翻译而成, 主要目的是更好的了解 [elixir](https://elixir-lang.org/) 语言本身, 有不够详实和确切的地方, 请参考 [elixir school](https://elixirschool.com/en/) 英文文档.
+
+在完成所有文档翻译的工作后, 会尝试添加部分学习过程中的心得, 如果有遗漏与错误, 欢迎 typo.
 
 官方文档的中文化在 github 上可以找到, [straightdave/programming_elixir](https://github.com/straightdave/programming_elixir).
 
@@ -39,6 +41,7 @@
 1. [behaviours](docs/behaviours.md)
 1. [GenStage](docs/genstage.md)
 1. [协议](docs/protocols.md)
+
 ### 详情
 
 ### 其他
