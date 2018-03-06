@@ -5,9 +5,9 @@
 <!-- TOC -->
 
 - [Behaviours](#behaviours)
-    - [使用](#%E4%BD%BF%E7%94%A8)
-    - [定义一个 behaviour](#%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA-behaviour)
-    - [使用 behaviours](#%E4%BD%BF%E7%94%A8-behaviours)
+  - [使用](#%E4%BD%BF%E7%94%A8)
+  - [定义一个 behaviour](#%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA-behaviour)
+  - [使用 behaviours](#%E4%BD%BF%E7%94%A8-behaviours)
 
 <!-- /TOC -->
 
@@ -115,4 +115,4 @@ lib/example/compressor.ex:1: warning: undefined behaviour function init/1 (for b
 Compiled lib/example/compressor.ex
 ```
 
-就是这样! 现在, 我们已经可以创建和共享 behaviour.
+就是这样! 现在, 我们已经可以创建和共享 behaviour 了.
